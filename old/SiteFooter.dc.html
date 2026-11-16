@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Kapcsolódó szolgáltatások, kapcsolat, lábléc</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap">
+<style>
+body{margin:0}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3,h4{font-family:Montserrat,system-ui,sans-serif}
+.ph{background-color:rgba(26,26,26,.06);background-image:linear-gradient(to top right,transparent calc(50% - 1px),rgba(26,26,26,.16) calc(50% - 1px),rgba(26,26,26,.16) calc(50% + 1px),transparent calc(50% + 1px)),linear-gradient(to bottom right,transparent calc(50% - 1px),rgba(26,26,26,.16) calc(50% - 1px),rgba(26,26,26,.16) calc(50% + 1px),transparent calc(50% + 1px))}
+.chip{display:inline-block;padding:6px 14px;border-radius:999px;background:#fff;color:rgba(26,26,26,.78);font:500 12px Inter,system-ui,sans-serif}
+input,textarea{font:400 16px Inter,system-ui,sans-serif;color:#1a1a1a}
+</style>
+</helmet>
+<div style="width:100%;font-family:Inter,system-ui,sans-serif;color:#1a1a1a;background:#1a1a1a">
+
+<section style="background:#fff">
+<div style="max-width:1440px;margin:0 auto;padding:96px 80px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 56px">
+<div style="flex:1 1 480px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#006633">Kell még egy kis energia?</span>
+<h2 style="font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:800;color:#1a1a1a">Csatlakozz a PKK hálózatára!</h2>
+</div>
+<p style="flex:1 1 420px;font-size:18px;line-height:1.65;color:rgba(26,26,26,.78)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<sc-for list="{{related}}" as="r" hint-placeholder-count="4">
+<a href="#" style="flex:1 1 260px;display:flex;flex-direction:column;gap:18px">
+<div class="ph" style="height:220px;border-radius:24px;display:flex;align-items:center;justify-content:center"><span class="chip">Kép</span></div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+<h3 style="font-size:22px;line-height:1.2;font-weight:700;color:#1a1a1a">{{r.name}}</h3>
+<span style="flex:none;width:40px;height:40px;border-radius:50%;background:#69b529;display:inline-flex;align-items:center;justify-content:center" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+</div>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="kapcsolat" style="background:#006633;color:#fff">
+<div style="max-width:1440px;margin:0 auto;padding:96px 80px;display:flex;flex-wrap:wrap;align-items:center;gap:56px 80px">
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:24px">
+<span style="width:96px;height:8px;border-radius:4px;background:#69b529;display:block" aria-hidden="true"></span>
+<h2 style="font-size:clamp(34px,4.4vw,60px);line-height:1.08;font-weight:800;color:#fff">Beszéljünk rólad, hogy rólad beszéljenek!</h2>
+<p style="font-size:18px;line-height:1.65;color:rgba(255,255,255,.88);max-width:520px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<a href="mailto:marketing@pecsikommunikacio.hu" style="font-size:18px;font-weight:700;color:#fff;border-bottom:2px solid #69b529;padding-bottom:4px">marketing@pecsikommunikacio.hu</a>
+</div>
+<form style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px;padding:40px;border-radius:28px;background:#fff;color:#1a1a1a">
+<h3 style="font-size:26px;line-height:1.2;font-weight:800;color:#1a1a1a">Kérdésed van?</h3>
+<p style="font-size:16px;line-height:1.5;color:rgba(26,26,26,.78)">Írj nekünk, vedd fel velünk a kapcsolatot!</p>
+<label style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600">Név
+<input type="text" style="height:52px;padding:0 18px;border-radius:14px;border:1px solid rgba(26,26,26,.3);background:#fff">
+</label>
+<label style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600">E-mail cím
+<input type="email" style="height:52px;padding:0 18px;border-radius:14px;border:1px solid rgba(26,26,26,.3);background:#fff">
+</label>
+<label style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600">Üzenet
+<textarea rows="4" style="padding:14px 18px;border-radius:14px;border:1px solid rgba(26,26,26,.3);background:#fff;resize:vertical"></textarea>
+</label>
+<label style="display:flex;align-items:center;gap:12px;font-size:14px;line-height:1.4;color:rgba(26,26,26,.78)">
+<input type="checkbox" style="width:22px;height:22px;flex:none;accent-color:#006633">
+<span>Elfogadom az <a href="#" style="color:#006633;text-decoration:underline">Adatkezelési nyilatkozatot</a>.</span>
+</label>
+<button type="button" style="align-self:flex-start;min-height:52px;padding:0 38px;border:0;border-radius:999px;background:#69b529;color:#1a1a1a;font:700 15px Inter,system-ui,sans-serif;cursor:pointer">Elküldöm</button>
+</form>
+</div>
+</section>
+
+<footer style="background:#1a1a1a;color:#fff">
+<div style="max-width:1440px;margin:0 auto;padding:72px 80px 40px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-wrap:wrap;gap:40px 80px;justify-content:space-between">
+<div style="flex:2 1 380px;display:flex;flex-direction:column;align-items:flex-start;gap:20px">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#69b529,#006633);display:inline-block" aria-hidden="true"></span>
+<span style="font-family:Montserrat,system-ui,sans-serif;font-weight:800;font-size:14px;line-height:1.15;letter-spacing:.06em;text-transform:uppercase">Pécsi<br>Kommunikációs Központ</span>
+</div>
+<p style="font-size:16px;line-height:1.65;color:rgba(255,255,255,.78);max-width:460px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+<div style="display:flex;gap:12px">
+<a href="#" aria-label="Facebook" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">f</a>
+<a href="#" aria-label="Instagram" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">ig</a>
+<a href="#" aria-label="LinkedIn" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700">in</a>
+</div>
+</div>
+<div style="flex:1 1 240px;display:flex;flex-direction:column;gap:14px">
+<h4 style="font-size:18px;font-weight:700;color:#69b529">Impresszum</h4>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Közérdekű dokumentumok</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Adatkezelési nyilatkozat</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Cookie szabályzat</a>
+</div>
+<div style="flex:1 1 240px;display:flex;flex-direction:column;gap:14px">
+<h4 style="font-size:18px;font-weight:700;color:#69b529">Szolgáltatásaink</h4>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Grafika</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Videókészítés</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Webfejlesztés</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Webhosting</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Social media</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Marketing management</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Reklámfelületek</a>
+<a href="#" style="font-size:15px;color:rgba(255,255,255,.85)">Nyomdai gyártás</a>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.2);padding-top:28px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.78)">A weboldalt készítette a <strong style="color:#fff">Pécsi Kommunikációs Központ Kft.</strong> 2026-ban. © Minden jog fenntartva.</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"current":{"editor":"text","default":"Grafika"},"$preview":{"width":1440,"height":1780}}'>
+class Component extends DCLogic {
+renderVals() {
+const all = ["Grafika", "Videókészítés", "Webfejlesztés", "Webhosting", "Social media", "Marketing management", "Reklámfelületek", "Nyomdai gyártás"];
+const cur = this.props.current ?? "Grafika";
+const i = Math.max(0, all.indexOf(cur));
+const related = [1, 2, 3, 4].map((k) => ({ name: all[(i + k) % all.length] }));
+return { related: related };
+}
+}
+</script>
+</body>
+</html>

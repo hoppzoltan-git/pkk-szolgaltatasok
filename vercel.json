@@ -1,0 +1,1 @@
+{"cleanUrls":true,"trailingSlash":false,"installCommand":"npm install","buildCommand":"sh make.sh","outputDirectory":"public","headers":[{"source":"/(.*)","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow"}]}]}

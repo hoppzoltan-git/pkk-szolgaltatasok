@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Eredeti oldal – kezdőlap</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@300;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3,h4{font-family:Montserrat,system-ui,sans-serif}
+button{font-family:Inter,system-ui,sans-serif}
+.herom{display:none}
+@media(min-width:1280px){.herom{display:block}}
+summary::-webkit-details-marker{display:none}
+.faq-i::before{content:"+"}
+details[open] .faq-i::before{content:"–"}
+input,textarea{font:400 14px Inter,system-ui,sans-serif;color:#fff}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.55)}
+</style>
+</helmet>
+<div style="width:100%;background:#fff;color:#1a1a1a;font-family:Inter,system-ui,sans-serif">
+
+<header style="position:relative;background:#1a1a1a;color:#fff;overflow:hidden">
+<svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" style="position:absolute;top:0;left:0;width:100%;height:780px" aria-hidden="true"><defs><linearGradient id="cv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#69b529"/><stop offset="1" stop-color="#006633"/></linearGradient></defs><path d="M430 -40C560 300 980 430 1500 520" fill="none" stroke="#006633" stroke-width="22" stroke-opacity=".5" transform="translate(0 26)"/><path d="M430 -40C560 300 980 430 1500 520" fill="none" stroke="url(#cv)" stroke-width="12" stroke-linecap="round"/></svg>
+<div style="position:relative;max-width:1440px;margin:0 auto;padding:24px 24px 0">
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px;padding:14px 28px;border-radius:24px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16)">
+<a href="#" style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#69b529,#006633);display:inline-block" aria-hidden="true"></span><span style="font-family:Montserrat,system-ui,sans-serif;font-weight:800;font-size:11px;line-height:1.2;letter-spacing:.06em;text-transform:uppercase">Pécsi<br>Kommunikációs Központ</span></a>
+<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px;font-size:13px;font-weight:700"><a href="#">Kezdőlap</a><a href="#">Rólunk</a><a href="#szolgaltatasok" style="color:#69b529">Szolgáltatásaink</a><a href="#kapcsolat">Kapcsolat</a></nav>
+<a href="#kapcsolat" style="<<GB>>;min-height:40px;padding:0 24px;font-size:12px">Árajánlatot kérek</a>
+</div>
+</div>
+<div class="herom" style="position:absolute;top:120px;right:32px;width:470px" aria-hidden="true"><<HEROMOCK>></div>
+<div style="position:relative;max-width:1440px;min-height:640px;margin:0 auto;padding:120px 56px 72px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:20px">
+<h1 style="font-size:clamp(40px,9vw,136px);line-height:1;font-weight:800;color:#fff;letter-spacing:-.02em;overflow-wrap:break-word;max-width:100%">Full-service</h1>
+<p style="font-family:Montserrat,system-ui,sans-serif;font-size:clamp(28px,5vw,76px);line-height:1.1;font-weight:300;color:#69b529;overflow-wrap:break-word;max-width:100%">marketing ügynökség</p>
+<p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);max-width:580px;margin-top:8px">A kreatív ötlettől a kész kiadványig, a weboldaltól a közösségi médiáig: minden marketingeszközt egy kézből, egy csapattal kapsz meg Pécsről.</p>
+<div style="display:flex;flex-wrap:wrap;gap:14px"><a href="#kapcsolat" style="<<GB>>">Árajánlatot kérek</a><a href="#szolgaltatasok" style="<<WB>>">Szolgáltatásaink</a></div>
+</div>
+</header>
+
+<section style="background:#fff"><div style="max-width:1440px;margin:0 auto;padding:40px 56px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px"><span style="flex:1 1 180px;font-size:13px;line-height:1.4;color:rgba(26,26,26,.7)">Partnereink és ügyfeleink,<br>akik minket választottak</span>
+<sc-for list="{{logos}}" as="l" hint-placeholder-count="6"><span style="flex:1 1 90px;text-align:center;font-family:Montserrat,system-ui,sans-serif;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:rgba(26,26,26,.55)">{{l.t}}</span></sc-for>
+</div></section>
+
+<section id="szolgaltatasok" style="background:#fff"><div style="max-width:1440px;margin:0 auto;padding:0 24px 24px;display:flex;flex-direction:column;gap:24px">
+<div style="<<PANEL>>;display:flex;flex-direction:column;gap:16px"><h2 style="<<H2>>">Neked miben segíthetünk?</h2><p style="font-size:16px;line-height:1.65;color:rgba(26,26,26,.78);max-width:900px">Az ötlettől a megvalósításig egy helyen dolgozunk. Válaszd ki, mire van szükséged, és nézd meg, hogyan segíthetünk: a legtöbb szolgáltatásnál külön oldalon mutatjuk be a munkánkat és az ajánlatainkat.</p></div>
+<div style="display:flex;flex-wrap:wrap;gap:24px"><<TILES>></div></div></section>
+
+<section style="background:#fff"><div style="max-width:1440px;margin:0 auto;padding:24px;display:flex;flex-direction:column;gap:16px">
+<div style="<<PANEL>>;display:flex;flex-direction:column;gap:20px"><h2 style="<<H2>>">Miért <span style="display:inline-block;padding:0 18px;border:4px solid #69b529;border-radius:999px;color:#006633">mi?</span></h2><p style="font-size:16px;line-height:1.65;color:rgba(26,26,26,.78);max-width:900px">Nálunk a stratégia, a kreatív munka és a gyártás ugyanabban a csapatban készül. Ettől gyorsabban haladunk, egységesebb marad az arculatod, és egyetlen kapcsolattartóval elintézheted az egészet.</p></div>
+<div style="display:flex;flex-wrap:wrap;gap:16px"><div style="position:relative;flex:1 1 190px;min-height:280px;border-radius:24px;overflow:hidden;background:#edf3e8"><<DESK>></div>
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="5"><div style="flex:1 1 190px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:28px;border-radius:24px;background:{{c.bg}};color:#fff"><span style="width:52px;height:52px;border-radius:50%;border:3px solid {{c.ac}};align-self:flex-end;display:block" aria-hidden="true"></span><div style="display:flex;flex-direction:column;gap:8px"><h3 style="font-size:22px;line-height:1.2;font-weight:800;color:#fff">{{c.title}}</h3><p style="font-size:14px;line-height:1.55;color:#fff;opacity:.9">{{c.text}}</p></div></div></sc-for>
+</div></div></section>
+
+<section style="background:#fff"><div style="max-width:1440px;margin:0 auto;padding:24px"><div style="<<PANEL>>;display:flex;flex-wrap:wrap;align-items:center;gap:40px 64px"><div style="flex:2 1 420px;min-width:0;display:flex;flex-direction:column;gap:22px"><h2 style="<<H2>>">Hogyan zajlik majd a közös munka?</h2><p style="font-size:17px;line-height:1.7;color:rgba(26,26,26,.82)">Az első beszélgetés során közösen felfedjük azokat a pontokat, ahol segítségre van szükséged, megismerjük egymást, a terméked, a szolgáltatásod.</p><p style="font-size:17px;line-height:1.7;color:rgba(26,26,26,.82)">A kapott információk alapján meghatározunk egy marketing eszközrendszert, amellyel közösen elérhetjük a céljaid, és közösen meghatározzuk a költségvetést.</p><p style="font-size:17px;line-height:1.7;color:rgba(26,26,26,.82)">A közös munka során megtervezzük a számodra optimális aktivitásokat, lenyomjuk a start gombot és az indított tevékenységeket folyamatosan mérve optimalizáljuk a kampányelemeket, a lehető legjobb és költséghatékony eredmény elérése érdekében.</p></div><div style="flex:1 1 220px;max-width:340px;min-width:0;margin:0 auto"><<FOLYAMAT>></div></div></div></section>
+
+<section style="background:#fff"><div style="max-width:1440px;margin:0 auto;padding:48px 56px 72px;display:flex;flex-wrap:wrap;gap:40px 80px">
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:16px;align-self:flex-start"><h2 style="font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:800;color:#1a1a1a">Gyakran Ismételt Kérdések</h2><p style="font-size:16px;line-height:1.65;color:rgba(26,26,26,.78)">Nem találod a választ? Írj nekünk, szívesen segítünk.</p></div>
+<div style="flex:2 1 520px;min-width:0;display:flex;flex-direction:column;gap:12px"><sc-for list="{{faq}}" as="f" hint-placeholder-count="4"><details open="{{f.open}}" style="padding:20px 26px;border-radius:20px;background:#f7f7f7"><summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;min-height:44px"><h3 style="font-size:18px;line-height:1.35;font-weight:700;color:#1a1a1a">{{f.q}}</h3><span class="faq-i" style="flex:none;width:36px;height:36px;border-radius:50%;background:#69b529;color:#1a1a1a;display:inline-flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;line-height:1" aria-hidden="true"></span></summary><p style="margin-top:12px;font-size:15px;line-height:1.65;color:rgba(26,26,26,.78)">{{f.a}}</p></details></sc-for></div>
+</div></section>
+
+<footer id="kapcsolat" style="background:#1a1a1a;color:#fff"><div style="max-width:1440px;margin:0 auto;padding:72px 56px 32px;display:flex;flex-direction:column;gap:48px"><div style="display:flex;flex-wrap:wrap;gap:40px 56px">
+<div style="flex:1.4 1 280px;display:flex;flex-direction:column;align-items:flex-start;gap:18px"><div style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#69b529,#006633);display:inline-block" aria-hidden="true"></span><span style="font-family:Montserrat,system-ui,sans-serif;font-weight:800;font-size:12px;line-height:1.2;letter-spacing:.06em;text-transform:uppercase">Pécsi<br>Kommunikációs Központ</span></div><p style="font-size:14px;line-height:1.65;color:rgba(255,255,255,.78);max-width:360px">Marketing, grafika, web és nyomda egy helyen. Beszéljünk róla, hogyan segíthetünk a céljaid elérésében.</p><a href="mailto:marketing@pecsikommunikacio.hu" style="font-size:15px;font-weight:700;color:#69b529">marketing@pecsikommunikacio.hu</a><div style="display:flex;gap:10px"><a href="#" aria-label="Facebook" style="<<SOC>>">f</a><a href="#" aria-label="Instagram" style="<<SOC>>">ig</a><a href="#" aria-label="LinkedIn" style="<<SOC>>">in</a></div></div>
+<div style="flex:1 1 180px;display:flex;flex-direction:column;gap:12px"><h4 style="font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#69b529">Impresszum</h4><a href="#" style="<<LK>>">Közérdekű dokumentumok</a><a href="#" style="<<LK>>">Adatkezelési nyilatkozat</a><a href="#" style="<<LK>>">Cookie szabályzat</a></div>
+<div style="flex:1 1 200px;display:flex;flex-direction:column;gap:12px"><h4 style="font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#69b529">Szolgáltatásaink</h4><<FOOTLINKS>></div>
+<form style="flex:1.6 1 340px;min-width:0;display:flex;flex-direction:column;gap:12px;padding:28px;border-radius:24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16)"><h3 style="font-size:18px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#fff">Kérdésed van?</h3><p style="font-size:13px;color:#69b529">Írj nekünk, és hamarosan felvesszük veled a kapcsolatot.</p><input type="text" aria-label="Név" placeholder="Név" style="<<IN>>"><input type="email" aria-label="E-mail cím" placeholder="E-mail cím" style="<<IN>>"><textarea rows="3" aria-label="Üzenet" placeholder="Üzenet" style="padding:12px 16px;border-radius:8px;border:0;background:rgba(255,255,255,.1);resize:vertical"></textarea><label style="display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,.8)"><input type="checkbox" style="width:18px;height:18px;flex:none;accent-color:#69b529">Elfogadom az Adatkezelési nyilatkozatot.</label><button type="button" style="<<GB>>;border:0;cursor:pointer;width:100%">Elküldöm</button></form>
+</div><div style="border-top:1px solid rgba(255,255,255,.2);padding-top:24px;font-size:13px;line-height:1.6;color:rgba(255,255,255,.7)">A weboldalt készítette a <strong style="color:#fff">Pécsi Kommunikációs Központ Kft.</strong> 2026-ban. © Minden jog fenntartva.</div></div></footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5600}}'>
+class Component extends DCLogic {
+renderVals() {
+const out = {};
+out.logos = ["Ügyfél logó", "Ügyfél logó", "Ügyfél logó", "Ügyfél logó", "Ügyfél logó", "Ügyfél logó"].map((t) => ({ t: t }));
+const g = "linear-gradient(135deg,#0a8f3f,#006633)";
+const cs = [["Minden egy kézből", "Grafika, videó, web és nyomda egy csapatban, külön beszállítók nélkül."], ["Helyi kötődés", "Pécsi csapatként ismerjük a helyi piacot és a közönséget."], ["Átlátható együttműködés", "Világos ütemterv és ajánlat, meglepetések nélkül."], ["Gyors egyeztetés", "Rövid út a kérdéstől a válaszig, egy állandó kapcsolattartóval."], ["Mérhető eredmények", "Nem csak elkészítjük a munkát, követjük is, mit hoz."]];
+out.cards = cs.map((c, i) => i % 3 === 1 ? { title: c[0], text: c[1], bg: "#1a1a1a", ac: "#69b529" } : { title: c[0], text: c[1], bg: g, ac: "#fff" });
+const a1 = "Az ár mindig a feladat méretétől és az igényektől függ. Egy rövid egyeztetés után részletes, átlátható árajánlatot adunk.";
+const a2 = "A határidő a munka jellegétől függ. Az ajánlatban minden feladathoz ütemtervet adunk, amelyet közösen egyeztetünk.";
+const a3 = "Igen. A grafikától a nyomdai gyártásig és a weboldalig minden megoldható egy kézből, így az arculatod egységes marad.";
+const a4 = "Töltsd ki az oldal alján lévő űrlapot, vagy írj a marketing@pecsikommunikacio.hu címre, és felvesszük veled a kapcsolatot.";
+out.faq = [
+{ q: "Mennyibe kerül egy együttműködés?", a: a1, open: true },
+{ q: "Mennyi idő alatt készül el egy projekt?", a: a2, open: false },
+{ q: "Egyben is rendelhetem a szolgáltatásokat?", a: a3, open: false },
+{ q: "Hogyan kérhetek árajánlatot?", a: a4, open: false }
+];
+return out;
+}
+}
+</script>
+</body>
+</html>
