@@ -1,4 +1,5 @@
 set -e
+mkdir -p src public
 cp old/SiteHeader.dc.html src/
 cd gen
 python3 bp.py
