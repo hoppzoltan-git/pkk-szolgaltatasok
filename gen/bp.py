@@ -144,14 +144,14 @@ plans: d.plans.map((p, i) => Object.assign({{ name: p[0], items: p[1].map((t) =>
 def folyamat():
     rows=''
     for i in range(8):
-        rows+=f'''<li data-fs="{{{{uid}}}}" style="position:relative;display:flex;align-items:center;gap:28px;min-height:210px">
+        rows+=f'''<li data-fs="{{{{uid}}}}" style="position:relative;display:flex;align-items:center;gap:28px;min-height:150px">
 <span style="{{{{d{i}}}}}">{i+1}</span>
 <div style="flex:1 1 280px;min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:20px 36px;opacity:{{{{o{i}}}}};transform:{{{{t{i}}}}};transition:transform .5s ease,opacity .5s ease">
 <div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:10px"><span style="font-family:Montserrat,system-ui,sans-serif;font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#006633">{i+1:02d} / 08</span><h3 style="font-size:clamp(24px,2.6vw,34px);line-height:1.15;font-weight:800;color:#1a1a1a">{STEPNAMES[i]}</h3><p style="font-size:16px;line-height:1.65;color:rgba(26,26,26,.82)">{{{{x{i}}}}}</p></div>
 <div style="flex:0 0 220px;width:220px;height:160px;border-radius:20px;overflow:hidden;background:#edf3e8;transform:scale({{{{s{i}}}}});transition:transform .5s ease,box-shadow .5s ease;box-shadow:{{{{b{i}}}}}">{art.step(i)}</div></div></li>'''
     body=f'''<section style="background:#fff;font-family:Inter,system-ui,sans-serif;color:#1a1a1a"><div style="max-width:1440px;margin:0 auto;padding:96px 80px;display:flex;flex-direction:column;gap:48px">
 <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">{eyebrow('Munkamenet')}<h2 style="font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:800;color:#1a1a1a">Hogyan zajlik majd a közös munka?</h2><p style="font-size:17px;line-height:1.65;color:rgba(26,26,26,.78)">Nyolc lépésben visszük végig a projektet. Görgess lefelé, és a lépések sorban kiemelődnek, felfelé görgetve pedig visszalépsz.</p></div>
-<div style="position:relative"><div style="position:absolute;left:27px;top:105px;bottom:105px;width:4px;border-radius:2px;background:#d9d9d9" aria-hidden="true"><div style="width:4px;border-radius:2px;background:linear-gradient(180deg,#69b529,#006633);height:{{{{fill}}}}%;transition:height .25s linear"></div></div>
+<div style="position:relative"><div style="position:absolute;left:27px;top:75px;bottom:75px;width:4px;border-radius:2px;background:#d9d9d9" aria-hidden="true"><div style="width:4px;border-radius:2px;background:linear-gradient(180deg,#69b529,#006633);height:{{{{fill}}}}%;transition:height .25s linear"></div></div>
 <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">{rows}</ol></div>
 <div><a href="#kapcsolat" style="{BTN};background:#69b529;color:#1a1a1a">Vágjunk bele!</a></div>
 </div></section>'''
