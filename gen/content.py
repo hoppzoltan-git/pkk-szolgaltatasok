@@ -76,3 +76,13 @@ PKG={
 'nyomda':('Nyomdai ajánlatok','Nyomtatvány a költségkeretedhez igazítva','Az ár a példányszámtól, a papírtól és a kivitelezéstől függ. Egyedi árajánlatot adunk.',[('Kisebb széria',['Névjegy vagy szórólap','Nyomdakész fájl','Papírajánlás']),('Kampány',['Több nyomtatvány','Egységes terv','Próbanyomat','Kiszállítás']),('Csomagolás',['Doboz vagy szatyor','Egyedi méret','Mintadarab','Kiszállítás'])]),
 }
 PORT={'grafika':'Nézd meg, mit terveztünk korábban: a portfóliónkban arculatokat, kiadványokat és csomagolásokat találsz.','video':'Nézd meg korábbi videóinkat és a kulisszák mögötti munkát a portfóliónkban.','web':'Böngéssz a korábbi weboldalaink és webshopjaink között a portfóliónkban.','hosting':'Nézd meg, milyen weboldalakat üzemeltetünk, és kérj ajánlatot a tárhelyre.','social':'Lapozz bele a közösségi médiás munkáinkba és a tartalomtervekbe.','marketing':'Nézd meg, hogyan építettünk fel kampányokat és mértük az eredményeket.','reklam':'Tekintsd meg korábbi kültéri kampányainkat és a felületek helyszíneit.','nyomda':'Nézd meg a korábban legyártott kiadványainkat és csomagolásainkat.'}
+CTA={
+'grafika':('Mesélj az arculati elképzeléseidről','Egyeztetünk a céljaidról, és a feladat méretéhez igazodó, személyre szabott árajánlatot küldünk.'),
+'video':('Készítsünk együtt videót','Írd meg, milyen videóra van szükséged, és a hossz és az utómunka alapján egyedi árajánlatot adunk.'),
+'web':('Építsük meg együtt az oldaladat','Mondd el, mire van szükséged, és a funkciók és az oldalak száma alapján egyedi árajánlatot készítünk.'),
+'hosting':('Találjuk meg a megfelelő tárhelyet','Írd meg, mekkora a weboldalad, és milyen szolgáltatásokra van szükséged, és személyre szabott ajánlatot küldünk.'),
+'social':('Építsük együtt a közösségedet','Mesélj a csatornáidról és a céljaidról, és a posztok számához igazított árajánlatot adunk.'),
+'marketing':('Tervezzük meg a következő kampányodat','Beszéljük át a céljaidat és a költségkeretedet, és egyedi javaslattal és árajánlattal jelentkezünk.'),
+'reklam':('Válaszd ki a hirdetésed helyét','Írd meg, mikor és hol szeretnél megjelenni, és ajánlatot adunk a felületekre és a kihelyezésre.'),
+'nyomda':('Kérj ajánlatot a nyomtatványodra','Add meg a típust, a példányszámot és a határidőt, és egyedi árajánlatot küldünk.'),
+}

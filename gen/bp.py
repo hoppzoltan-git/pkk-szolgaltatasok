@@ -117,30 +117,21 @@ checks: d.checks.map((t) => ({{ text: t }}))
 }}'''
     return doc('Bevezető és kiemelés',body,script,1420)
 def packages():
-    body=f'''<section style="width:100%;background:#fff;color:#1a1a1a;font-family:Inter,system-ui,sans-serif;border-top:1px solid rgba(26,26,26,.1)">
-<div style="max-width:1440px;margin:0 auto;padding:96px 80px;display:flex;flex-direction:column;gap:56px">
-<div style="display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">{eyebrow('{{eyebrow}}')}<h2 style="font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:800;color:#1a1a1a;max-width:800px">{{{{title}}}}</h2><p style="font-size:18px;line-height:1.65;color:rgba(26,26,26,.78);max-width:640px">{{{{text}}}}</p></div>
-<div style="display:flex;flex-wrap:wrap;align-items:stretch;gap:24px">
-<sc-for list="{{{{plans}}}}" as="p" hint-placeholder-count="3">
-<div style="flex:1 1 320px;display:flex;flex-direction:column;gap:24px;padding:40px;border-radius:28px;background:{{{{p.bg}}}};color:{{{{p.fg}}}};border:2px solid {{{{p.border}}}}">
-<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><h3 style="font-size:24px;line-height:1.2;font-weight:800;color:{{{{p.fg}}}}">{{{{p.name}}}}</h3><sc-if value="{{{{p.featured}}}}" hint-placeholder-val="{{{{ false }}}}"><span style="padding:6px 14px;border-radius:999px;background:#69b529;color:#1a1a1a;font-size:12px;font-weight:700">Ajánlott</span></sc-if></div>
-<div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:Montserrat,system-ui,sans-serif;font-size:30px;line-height:1.1;font-weight:800;color:{{{{p.fg}}}}">Egyedi árajánlat</span><span style="font-size:14px;color:{{{{p.fg}}}};opacity:.8">a feladatod igényei szerint</span></div>
-<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;flex:1">
-<sc-for list="{{{{p.items}}}}" as="i" hint-placeholder-count="5"><li style="display:flex;align-items:center;gap:12px;font-size:16px;line-height:1.4"><span style="flex:none;width:24px;height:24px;border-radius:50%;background:#69b529;display:inline-flex;align-items:center;justify-content:center" aria-hidden="true">{CHECK.replace('width="14" height="14"','width="12" height="12"')}</span><span>{{{{i.t}}}}</span></li></sc-for></ul>
-<a href="mailto:marketing@pecsikommunikacio.hu" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;border-radius:999px;background:{{{{p.btnBg}}}};color:{{{{p.btnFg}}}};font-size:15px;font-weight:700;border:2px solid #69b529">Árajánlatot kérek</a>
-</div></sc-for></div></div></section>'''
+    body=f'''<section style="width:100%;background:#fff;color:#1a1a1a;font-family:Inter,system-ui,sans-serif"><div style="max-width:1440px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(20px,5.5vw,80px)">
+<div style="position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px 56px;padding:clamp(32px,5vw,64px);border-radius:32px;background:#1a1a1a;color:#fff">
+<div style="position:absolute;top:0;right:0;bottom:0;left:0;background:radial-gradient(ellipse at 90% 20%,rgba(105,181,41,.35),rgba(26,26,26,0) 60%)" aria-hidden="true"></div>
+<div style="position:relative;flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px">{eyebrow('Egyedi árajánlat','#69b529')}<h2 style="font-size:clamp(28px,3.6vw,44px);line-height:1.12;font-weight:800;color:#fff">{{{{title}}}}</h2><p style="font-size:18px;line-height:1.65;color:rgba(255,255,255,.82);max-width:620px">{{{{text}}}}</p></div>
+<div style="position:relative;flex:0 1 auto;display:flex;flex-wrap:wrap;gap:16px"><a href="mailto:marketing@pecsikommunikacio.hu" style="{BTN};background:#69b529;color:#1a1a1a">Árajánlatot kérek</a><a href="#portfolio" style="{BTN};border:2px solid #fff;color:#fff">Lapozz bele portfóliónkba</a></div>
+</div></div></section>'''
     script=f'''class Component extends DCLogic {{
 renderVals() {{
-const D = {J({k:{'e':v[0],'t':v[1],'x':v[2],'plans':[[n,i] for n,i in v[3]]} for k,v in PKG.items()})};
+const D = {J(CTA)};
 const k = this.props.page ?? "grafika";
 const d = D[k];
-const light = {{ bg: "#ffffff", fg: "#1a1a1a", border: "rgba(26,26,26,0.15)", btnBg: "transparent", btnFg: "#1a1a1a", featured: false }};
-const dark = {{ bg: "#1a1a1a", fg: "#ffffff", border: "#69b529", btnBg: "#69b529", btnFg: "#1a1a1a", featured: true }};
-return {{ eyebrow: d.e, title: d.t, text: d.x,
-plans: d.plans.map((p, i) => Object.assign({{ name: p[0], items: p[1].map((t) => ({{ t: t }})) }}, i === 1 ? dark : light)) }};
+return {{ title: d[0], text: d[1] }};
 }}
 }}'''
-    return doc('Csomagajánlatok',body,script,960)
+    return doc('Árajánlat felhívás',body,script,460)
 def folyamat():
     rows=''
     for i in range(8):
